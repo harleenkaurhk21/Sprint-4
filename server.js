@@ -1,3 +1,5 @@
+import path from "path";
+import { fileURLToPath } from "url";
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -6,6 +8,10 @@ import { GoogleGenAI } from "@google/genai";
 dotenv.config();
 
 const app = express();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.use(express.static(__dirname));
 
 app.use(cors());
 app.use(express.json());
@@ -15,7 +21,7 @@ const ai = new GoogleGenAI({
 });
 
 app.get("/", (req, res) => {
-  res.send("AI Cover Letter Generator Backend Running");
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.post("/generate", async (req, res) => {
@@ -66,7 +72,7 @@ Return only the cover letter.
   }
 });
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`✅ Server running on http://localhost:${PORT}`);
