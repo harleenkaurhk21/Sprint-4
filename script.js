@@ -172,19 +172,13 @@ form.addEventListener("submit", async (e) => {
 
     try {
 
-        const response = await fetch("http://localhost:3000/generate", {
-
-            method: "POST",
-
-            headers: {
-
-                "Content-Type": "application/json"
-
-            },
-
-            body: JSON.stringify(data)
-
-        });
+        const response = await fetch("https://sprint-4-5bku.onrender.com/generate", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+});
 
         if (!response.ok) {
 
