@@ -172,7 +172,7 @@ form.addEventListener("submit", async (e) => {
 
     try {
 
-        const response = await fetch("/generate", {
+        const response = await fetch("http://localhost:3000/generate", {
 
             method: "POST",
 
