@@ -1,20 +1,15 @@
-/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-/* Reset */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
 }
-
 body{
     background:#f4f7fb;
     color:#222;
     transition:.4s;
 }
-
 header{
     background:#2563eb;
     color:#fff;
@@ -24,7 +19,6 @@ header{
     align-items:center;
     box-shadow:0 3px 8px rgba(0,0,0,.2);
 }
-
 header h1{
     font-size:28px;
     display:flex;
@@ -90,10 +84,6 @@ textarea{
     color:#666;
     font-size:13px;
 }
-/* ===========================
-   Buttons
-=========================== */
-
 .buttons{
     display:flex;
     gap:15px;
@@ -128,11 +118,6 @@ button[type="submit"]:hover{
 #resetBtn:hover{
     background:#dc2626;
 }
-
-/* ===========================
-   Result Box
-=========================== */
-
 .result{
     margin-top:35px;
 }
@@ -152,10 +137,6 @@ button[type="submit"]:hover{
     line-height:1.7;
     overflow:auto;
 }
-
-/* ===========================
-   Action Buttons
-=========================== */
 
 .actions{
     display:flex;
@@ -192,10 +173,6 @@ button[type="submit"]:hover{
     background:#d97706;
 }
 
-/* ===========================
-   Loading Spinner
-=========================== */
-
 #loading{
     display:none;
     text-align:center;
@@ -223,11 +200,6 @@ transform:rotate(360deg);
 }
 
 }
-
-/* ===========================
-   Toast Message
-=========================== */
-
 #toast{
     position:fixed;
     bottom:30px;
@@ -241,9 +213,6 @@ transform:rotate(360deg);
     box-shadow:0 8px 20px rgba(0,0,0,.2);
     z-index:999;
 }
-/* ===========================
-   Dark Mode
-=========================== */
 
 body.dark{
     background:#121212;
@@ -285,11 +254,6 @@ body.dark #darkModeBtn{
     background:#facc15;
     color:#000;
 }
-
-/* ===========================
-   Hover Effects
-=========================== */
-
 .container{
     transition:.3s;
 }
@@ -307,11 +271,6 @@ textarea,
 button{
     transition:all .3s ease;
 }
-
-/* ===========================
-   Scrollbar
-=========================== */
-
 ::-webkit-scrollbar{
     width:10px;
 }
@@ -328,11 +287,6 @@ button{
 ::-webkit-scrollbar-thumb:hover{
     background:#1d4ed8;
 }
-
-/* ===========================
-   Responsive Design
-=========================== */
-
 @media(max-width:768px){
 
 header{
@@ -388,11 +342,6 @@ textarea{
 }
 
 }
-
-/* ===========================
-   Fade Animation
-=========================== */
-
 @keyframes fadeIn{
 
 from{
